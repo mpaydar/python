@@ -4,10 +4,8 @@ import random
 columns = int(input("Enter number of rows (n): "))
 rows = int(input("Enter number of columns (m): "))
 n3 = int(input("Enter second number (m): "))
-
-
-number_flag=False
 x=columns*rows
+
 if n3>x:
     my_list=[[0 for col in range(columns)] for r in range(rows)]
     for row in range(rows):
