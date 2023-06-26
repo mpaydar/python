@@ -6,7 +6,7 @@ rows = int(input("Enter number of columns (m): "))
 n3 = int(input("Enter second number (m): "))
 x=columns*rows
 
-if n3>x:
+if n3/x>0:
     my_list=[[0 for col in range(columns)] for r in range(rows)]
     for row in range(rows):
         for column in range(columns):
