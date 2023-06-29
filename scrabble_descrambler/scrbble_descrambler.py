@@ -52,7 +52,7 @@ tuples = generate_tuple_list(original_voc)
 d = directory_populating(tuples)
 # print(d)
 
-user_input=input("Enter six letters to see all the words containing these letters: ")
+user_input=input("Enter six letters (without any space) to see all the words containing these letters: ")
 user_input_lexOrder=signature.signature(user_input)
 user_input_lexOrder=convert_letter(user_input_lexOrder)
 user_respond=directory_lookup(user_input_lexOrder)

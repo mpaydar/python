@@ -4,6 +4,10 @@
 # Ascending order The algorithm will compare the current letter l, with all other letters
 # on its right side The character comparison is done all in terms of their ASCI code.
 
+# Please note that processing the word into lex_order dictionary is for educational purposes to show the use of
+# available dictionary methods such as values(). It is perfectly fine to process the word directly into an array.
+# Then use the sorting algorithm to get the desire alphabetic version of the words
+
 # @parameters:
 # n: individual word; type: string
 def signature(n):
