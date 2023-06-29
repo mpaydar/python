@@ -35,5 +35,5 @@ def signature(n):
     return letters
 
 
-a = signature("STOP")
-print(a)
+# a = signature("STOP")
+# print(a)
