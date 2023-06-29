@@ -21,15 +21,7 @@ def signature(n):
 
     return letters
 
-def convert_letter(lt):
-    container=[]
-    string_word = ""
-    for word in lt:
-        for l in word:
-            string_word+=l
-        container.append(string_word)
-        string_word=""
-    return container
+
 
 
 
