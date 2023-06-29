@@ -64,6 +64,7 @@ def filter_dictionary(words_director):
         if len(temp_list[index][0]) == 6:
             filtered_list.append(temp_list[index])
     print("Number of words after filter: ", len(filtered_list))
+    serializing(filtered_list)
     # print(temp_list[0:11])
     # print(filtered_list[0:11])
     return filtered_list
@@ -82,6 +83,7 @@ def directory_lookup(user_input,filtered_words):
 
 def controller():
     if os.path.exists("dictionary.pkl"):
+        print("if-statement")
         # Load the pickled data from "dictionary.pkl"
         filtered_list = deserializing()
         result=generate_dictionary(filtered_list)
@@ -94,6 +96,7 @@ def controller():
 
 
     else:
+        print("else-statement")
         original_voc = read_file()
         tuples = generate_tuple_list(original_voc)
         # print(tuples[2][0])  # signature element of the tuple    (0=signature,1=actual_word)
@@ -110,3 +113,8 @@ def controller():
         print("Here's the list of possible words you may use with the 6 letters you have provided: ", user_respond)
 
 controller()
+ask_user=input("To end serialization - d, otherwise press any other key")
+if ask_user == 'd':
+    os.remove("dictionary.pkl")
+else:
+    exit(0)
