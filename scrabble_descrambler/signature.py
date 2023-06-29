@@ -16,15 +16,13 @@ def signature(n):
     k = lex_order.values()     # Getting a dictionary object that include only the letters dic_val([A',...])
     for letter in k:           # iterating through the dictionary object and putting the values in the array "letters"
         letters.append(letter)
-    # My sorting algorithm which sort each list that represent a word in alphabetic order: Ascending order
-        # The algorithm will compare the current letter l, with all other letters on its right side
-        # The character comparison is done all in terms of their ASCI code.
+
+    # The sorting algorithm
     for l in range(len(letters)):
         next = l + 1
         old_letter += letters[l]
         for next_letter in range(next, len(letters)):
-            # The swapping happening using character ASCI representation
-            # If the next_letter has lower ASCI than current letter l , they will be swapped in the letters array
+            # Comparison
             if letters[next_letter] < letters[l]:
                 temp = letters[l]
                 letters[l] = letters[next_letter]
@@ -37,5 +35,5 @@ def signature(n):
     return letters
 
 
-# a = signature("STOP")
-# print(a)
+a = signature("STOP")
+print(a)
